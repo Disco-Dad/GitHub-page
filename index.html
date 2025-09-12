@@ -1,12 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dark Side of the Moon 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Side of the Moon 2 - Lunar Exploration Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>
-        The "dark side of the Moon" refers to the hemisphere of the Moon that is not visible from Earth. This side is not actually dark; it receives sunlight just like the side we see. The reason we always see the same face of the Moon is because it is tidally locked with Earth, meaning its rotation period matches its orbit around our planet. The term "dark" is metaphorical, representing the unknown aspect of the Moon before space exploration provided images of its far side.
-    </p>
+    <div class="stars"></div>
+    <div class="moving-stars"></div>
+    
+    <header class="hero">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1 class="logo">🌙 Dark Side of the Moon 2</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#phases" class="nav-link">Phases</a></li>
+                <li><a href="#facts" class="nav-link">Facts</a></li>
+                <li><a href="#explore" class="nav-link">Explore</a></li>
+            </ul>
+        </nav>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Discover the Hidden Face of Our Moon</h1>
+            <p class="hero-subtitle">Journey to the mysterious far side that humans had never seen until the space age</p>
+            <button class="cta-button" onclick="scrollToSection('phases')">Begin Exploration</button>
+        </div>
+        
+        <div class="moon-container">
+            <div class="moon" id="moon">
+                <div class="crater crater-1"></div>
+                <div class="crater crater-2"></div>
+                <div class="crater crater-3"></div>
+                <div class="crater crater-4"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="section intro-section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="text-content">
+                        <h2 class="section-title">The Eternal Mystery</h2>
+                        <p class="large-text">
+                            The "dark side of the Moon" refers to the hemisphere of the Moon that is not visible from Earth. 
+                            This side is not actually dark—it receives sunlight just like the side we see.
+                        </p>
+                        <p>
+                            The reason we always see the same face of the Moon is because it is tidally locked with Earth, 
+                            meaning its rotation period matches its orbit around our planet. The term "dark" is metaphorical, 
+                            representing the unknown aspect of the Moon before space exploration provided images of its far side.
+                        </p>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number">27.3</span>
+                                <span class="stat-label">Days to Orbit Earth</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">384,400</span>
+                                <span class="stat-label">km from Earth</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">1959</span>
+                                <span class="stat-label">First Far Side Photo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-content">
+                        <div class="earth-moon-system">
+                            <div class="earth"></div>
+                            <div class="orbit-path"></div>
+                            <div class="orbiting-moon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="phases" class="section phases-section">
+            <div class="container">
+                <h2 class="section-title">Lunar Phases Interactive</h2>
+                <p class="section-subtitle">Watch how the Moon's appearance changes as it orbits Earth</p>
+                
+                <div class="phases-container">
+                    <div class="phase-item" data-phase="new">
+                        <div class="phase-moon new-moon"></div>
+                        <h3>New Moon</h3>
+                        <p>Not visible from Earth</p>
+                    </div>
+                    <div class="phase-item" data-phase="waxing-crescent">
+                        <div class="phase-moon waxing-crescent"></div>
+                        <h3>Waxing Crescent</h3>
+                        <p>Growing larger</p>
+                    </div>
+                    <div class="phase-item" data-phase="first-quarter">
+                        <div class="phase-moon first-quarter"></div>
+                        <h3>First Quarter</h3>
+                        <p>Half illuminated</p>
+                    </div>
+                    <div class="phase-item" data-phase="waxing-gibbous">
+                        <div class="phase-moon waxing-gibbous"></div>
+                        <h3>Waxing Gibbous</h3>
+                        <p>Nearly full</p>
+                    </div>
+                    <div class="phase-item" data-phase="full">
+                        <div class="phase-moon full-moon"></div>
+                        <h3>Full Moon</h3>
+                        <p>Fully illuminated</p>
+                    </div>
+                    <div class="phase-item" data-phase="waning-gibbous">
+                        <div class="phase-moon waning-gibbous"></div>
+                        <h3>Waning Gibbous</h3>
+                        <p>Decreasing</p>
+                    </div>
+                    <div class="phase-item" data-phase="last-quarter">
+                        <div class="phase-moon last-quarter"></div>
+                        <h3>Last Quarter</h3>
+                        <p>Half visible</p>
+                    </div>
+                    <div class="phase-item" data-phase="waning-crescent">
+                        <div class="phase-moon waning-crescent"></div>
+                        <h3>Waning Crescent</h3>
+                        <p>Fading away</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="facts" class="section facts-section">
+            <div class="container">
+                <h2 class="section-title">Fascinating Lunar Facts</h2>
+                <div class="facts-grid">
+                    <div class="fact-card">
+                        <div class="fact-icon">🚀</div>
+                        <h3>First Glimpse</h3>
+                        <p>The Soviet Luna 3 spacecraft captured the first images of the Moon's far side in October 1959, revealing a heavily cratered landscape.</p>
+                    </div>
+                    <div class="fact-card">
+                        <div class="fact-icon">🔒</div>
+                        <h3>Tidal Locking</h3>
+                        <p>The Moon's synchronous rotation means the same hemisphere always faces Earth - a phenomenon caused by gravitational forces over billions of years.</p>
+                    </div>
+                    <div class="fact-card">
+                        <div class="fact-icon">🌑</div>
+                        <h3>Not Actually Dark</h3>
+                        <p>The "dark" side receives just as much sunlight as the near side. During a new moon, the far side is actually fully illuminated!</p>
+                    </div>
+                    <div class="fact-card">
+                        <div class="fact-icon">🏔️</div>
+                        <h3>Different Terrain</h3>
+                        <p>The far side has more craters and fewer of the dark plains (maria) that we see on the near side, creating a distinctly different landscape.</p>
+                    </div>
+                    <div class="fact-card">
+                        <div class="fact-icon">📡</div>
+                        <h3>Radio Quiet Zone</h3>
+                        <p>The far side is shielded from Earth's radio interference, making it ideal for radio astronomy and deep space communication.</p>
+                    </div>
+                    <div class="fact-card">
+                        <div class="fact-icon">👨‍🚀</div>
+                        <h3>Human Visitors</h3>
+                        <p>Apollo astronauts were the first humans to see the far side directly when they orbited the Moon during their historic missions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="explore" class="section explore-section">
+            <div class="container">
+                <h2 class="section-title">Explore Lunar Features</h2>
+                <div class="lunar-map">
+                    <div class="map-container">
+                        <div class="feature-point" data-feature="mare-orientale" style="top: 45%; left: 15%;">
+                            <div class="point-marker"></div>
+                            <div class="feature-popup">
+                                <h4>Mare Orientale</h4>
+                                <p>A massive impact basin on the Moon's western limb</p>
+                            </div>
+                        </div>
+                        <div class="feature-point" data-feature="south-pole-aitken" style="top: 75%; left: 50%;">
+                            <div class="point-marker"></div>
+                            <div class="feature-popup">
+                                <h4>South Pole-Aitken Basin</h4>
+                                <p>The largest and oldest impact basin on the Moon</p>
+                            </div>
+                        </div>
+                        <div class="feature-point" data-feature="apollo-basin" style="top: 35%; left: 70%;">
+                            <div class="point-marker"></div>
+                            <div class="feature-popup">
+                                <h4>Apollo Basin</h4>
+                                <p>A large crater named after the Apollo program</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Dark Side of the Moon 2. A journey through lunar mysteries.</p>
+            <p>Built with curiosity and cosmic wonder ✨</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
